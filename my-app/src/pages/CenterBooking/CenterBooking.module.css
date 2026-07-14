@@ -1,0 +1,408 @@
+.page {
+  background-color: var(--color-background);
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.pageSubtitle {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+}
+
+.addCenterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-top: 16px;
+}
+
+/* ---------- Admin Add Form ---------- */
+.addForm {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.formInput,
+.formTextarea {
+  flex: 1;
+  min-width: 200px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: var(--color-accent);
+}
+
+.formTextarea {
+  resize: vertical;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  cursor: pointer;
+  min-width: 180px;
+}
+
+.checkboxLabel input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+/* ======= edit image =========== */
+.groupCard{
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.groupCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  
+}
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardContent {
+  padding: 20px;
+}
+.newBadge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background-color: #f97316;
+  color: var(--color-white);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 800;
+  box-shadow: var(--shadow-sm);
+}
+/*  */
+.timeSlotsSection {
+  border-top: 1px solid var(--color-border);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeSlotsLabel {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.timeSlotsHint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: -6px;
+}
+
+.timeSlotRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.removeSlotBtn {
+  color: var(--color-error);
+  flex-shrink: 0;
+}
+
+.addSlotBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  font-size: 13px;
+  width: fit-content;
+}
+
+.submitFormBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ---------- Groups Grid ---------- */
+.groupsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.groupCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.groupCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.newBadge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background-color: #f97316;
+  color: var(--color-white);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 800;
+  box-shadow: var(--shadow-sm);
+}
+
+.gradeTag {
+  display: inline-block;
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.groupName {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.groupDetail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.groupNotes {
+  font-size: 12.5px;
+  color: var(--color-accent-dark);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ---------- Modal ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.bookingModal {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: var(--shadow-md);
+}
+
+.modalTitle {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.modalSubtitle {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  margin-bottom: 18px;
+}
+
+.groupsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.timeOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14.5px;
+  font-weight: 600;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.timeSelected {
+  border-color: var(--color-accent);
+  background-color: var(--color-primary-soft);
+}
+
+.timeFull {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.badgeAvailable {
+  background-color: #dcfce7;
+  color: #16a34a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badgeFull {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+}
+
+.cancelBtn,
+.confirmBtn {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.cancelBtn {
+  background-color: var(--color-primary-soft);
+  color: var(--color-text-main);
+}
+
+.confirmBtn {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.confirmBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.deleteGroupBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background-color: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.deleteGroupBtn:hover {
+  background-color: #ffcdd2;
+  border-color: #e57373;
+}
+
+.deleteGroupBtn:active {
+  transform: scale(0.98);
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 500px) {
+  .formRow,
+  .timeSlotRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .groupsGrid {
+    grid-template-columns: 1fr;
+  }
+}

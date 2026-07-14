@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+
+# Project folders
+backend/node_modules/
+my-app/node_modules/

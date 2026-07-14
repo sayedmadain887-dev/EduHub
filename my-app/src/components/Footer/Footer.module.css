@@ -1,0 +1,176 @@
+.footer {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  color: var(--color-white);
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Column ---------- */
+.column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.logoIcon {
+  color: var(--color-accent-light);
+  font-size: 18px !important;
+}
+
+.logoText {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-accent-light);
+}
+
+.tagline {
+  font-size: 12px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  max-width: 190px;
+}
+
+.columnTitle {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-accent-light);
+  margin-bottom: 12px;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 10px;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timelineDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-light);
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.timelineDot svg {
+  font-size: 14px !important;
+}
+
+.timelineLine {
+  flex: 1;
+  width: 2px;
+  min-height: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 2px 0;
+}
+
+.timelineLink {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: color 0.2s ease;
+}
+
+.timelineLink:hover {
+  color: var(--color-accent-light);
+}
+
+.timelineItem:hover .timelineDot {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.timelineSubValue {
+  font-size: 10.5px;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+/* ---------- Credit Line ---------- */
+.creditSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.creditBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.creditLogo {
+  color: var(--color-accent-light);
+  font-size: 16px !important;
+  flex-shrink: 0;
+}
+
+.creditText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.creditEnglish {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-accent-light);
+}
+
+.creditArabic {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .creditSection {
+    justify-content: center;
+  }
+}

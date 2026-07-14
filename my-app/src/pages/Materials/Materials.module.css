@@ -1,0 +1,392 @@
+.page {
+  background-color: var(--color-background);
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.pageSubtitle {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-top: 16px;
+}
+
+/* ---------- Admin Add Form ---------- */
+.addForm {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.formInput,
+.formTextarea {
+  flex: 1;
+  min-width: 200px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: var(--color-accent);
+}
+
+.formTextarea {
+  resize: vertical;
+}
+
+.submitFormBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ---------- Folders Grid ---------- */
+.foldersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+.folderCard{
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: 32px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    position: relative;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.folderCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 32px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.folderCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.folderIcon {
+  font-size: 48px !important;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.folderName {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.folderCount {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+.fileInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fileLabel {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.fileInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.fileName {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.deleteMaterialBtn {
+  color: var(--color-error);
+  flex-shrink: 0;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.deleteMaterialBtn:hover {
+  background-color: #fef2f2;
+}
+.pdfActions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.downloadBtn,
+.viewBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.downloadBtn {
+  background-color: #2e7d32;
+}
+
+.viewBtn {
+  background-color: #1976d2;
+}
+
+.downloadBtn:hover,
+.viewBtn:hover {
+  opacity: 0.9;
+}
+/* ---------- Folder Content ---------- */
+.folderContent {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.folderTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+
+.emptyText {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  padding: 40px 0;
+}
+
+/* ---------- Materials List (File Explorer style) ---------- */
+.materialsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.materialRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.materialRow:hover {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-accent);
+}
+
+.materialIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #fef2f2;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.pdfIcon {
+  color: #dc2626;
+  font-size: 24px !important;
+}
+
+.materialInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.materialName {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.materialDescription {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.materialDate {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---------- Embedded PDF Viewer Modal ---------- */
+.pdfOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.pdfModal {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 850px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.pdfHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pdfTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.closePdfBtn {
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.pdfFrameWrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.pdfFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .foldersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .materialRow {
+    flex-wrap: wrap;
+  }
+
+  .materialDate {
+    width: 100%;
+    text-align: right;
+    margin-top: 4px;
+  }
+
+  .pdfModal {
+    height: 90vh;
+  }
+}

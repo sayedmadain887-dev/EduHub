@@ -1,0 +1,329 @@
+.page {
+  background-color: var(--color-background);
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.pageSubtitle {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-top: 16px;
+}
+
+/* ---------- Admin Add Form ---------- */
+.addForm {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formInput,
+.formTextarea {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: var(--color-accent);
+}
+
+.formTextarea {
+  resize: vertical;
+}
+
+.submitFormBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.emptyText {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  padding: 60px 0;
+}
+
+/* ---------- Pages Selector ---------- */
+.pagesSection {
+  border-top: 1px solid var(--color-border);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pagesLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.pagesOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.pageCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  cursor: pointer;
+}
+
+.pageCheckbox input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 16px;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timelineDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timelineDot svg {
+  font-size: 20px;
+}
+
+.timelineLine {
+  flex: 1;
+  width: 2px;
+  background-color: var(--color-border);
+  margin: 4px 0;
+}
+
+.timelineItem:last-child .timelineLine {
+  display: none;
+}
+
+/* ---------- Card ---------- */
+.card {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+  flex: 1;
+  min-height: 90px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.typeTag {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.cardDate {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.cardDateOnImage {
+  color: #e2e8f0;
+}
+
+.cardTitle {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 6px;
+}
+
+.cardMessage {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.textOnImage {
+  color: #ffffff !important;
+}
+
+.dismissBtn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: var(--color-text-muted);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.dismissBtn:hover {
+  background-color: var(--color-primary-soft);
+}
+
+.dismissBtnOnImage {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.dismissBtnOnImage:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.loadingText,.errorText{
+  text-align:"center";
+  padding:2rem;
+  color:#f8fafc;
+  font-size:1.1rem;
+}
+.errorText{
+  color:"#ef4444";
+}
+.sumbitFormBtn:disabled{
+  opacity:0.6;
+  cursor:not-allowed;
+}
+.fileInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fileLabel {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.fileInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.fileName {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 12px;
+  left: 46px;
+  color: var(--color-error);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #fef2f2;
+}
+
+.deleteBtnOnImage {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.deleteBtnOnImage:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 500px) {
+  .timelineDot {
+    width: 34px;
+    height: 34px;
+  }
+
+  .card {
+    padding: 14px 16px;
+  }
+}

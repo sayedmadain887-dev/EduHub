@@ -1,0 +1,201 @@
+/* ==========================================================
+   Page Wrapper - Split Screen Layout
+   ========================================================== */
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ==========================================================
+   Left Side - Branding
+   ========================================================== */
+.brandSide {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-dark),
+    var(--color-primary)
+  );
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px;
+}
+
+.brandTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-accent-light);
+  margin-bottom: 20px;
+}
+
+.brandText {
+  font-size: 18px;
+  color: #cbd5e1;
+  max-width: 380px;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   Right Side - Form
+   ========================================================== */
+.formSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  padding: 40px 24px;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 400px;
+}
+
+.formTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+/* ==========================================================
+   Form Fields
+   ========================================================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  background-color: var(--color-white);
+  transition: border-color 0.2s ease;
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--color-accent);
+}
+
+.inputIcon {
+  color: var(--color-text-muted);
+}
+
+.input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14.5px;
+  background: transparent;
+  color: var(--color-text-main);
+}
+
+.eyeButton {
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.errorText {
+  color: var(--color-error);
+  font-size: 12.5px;
+}
+
+.serverError {
+  background-color: #fef2f2;
+  color: var(--color-error);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  border: 1px solid #fecaca;
+}
+
+/* ==========================================================
+   Submit Button
+   ========================================================== */
+.submitBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   Switch to Register
+   ========================================================== */
+.switchText {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.switchLink {
+  color: var(--color-accent-dark);
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+@media (max-width: 768px) {
+  .pageWrapper {
+    flex-direction: column;
+  }
+
+  .brandSide {
+    padding: 40px 24px;
+    min-height: 200px;
+  }
+
+  .brandTitle {
+    font-size: 32px;
+  }
+
+  .formSide {
+    padding: 40px 20px;
+  }
+}

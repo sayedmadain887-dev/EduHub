@@ -1,0 +1,301 @@
+.profilePage {
+  background-color: var(--color-background);
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ================= Header Card ================= */
+.headerCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.headerInfo {
+  flex: 1;
+  min-width: 150px;
+}
+
+.userName {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.userEmail {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fef2f2;
+  color: var(--color-error);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: background-color 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background-color: #fee2e2;
+}
+
+/* ================= Student Code Card ================= */
+.codeCard {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  color: var(--color-white);
+}
+
+.codeLabel {
+  font-size: 13.5px;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.codeValue {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-accent-light);
+  user-select: none;
+  margin-bottom: 12px;
+}
+
+.codeNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+.codeInstruction{
+  font-size:13px;
+  color:#cbd5e1;
+  line-height:1.6;
+  max-width:320px;
+  margin:0 auto 14px;
+}
+
+/* ================= Section Cards ================= */
+.sectionCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 18px;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+/* ================= Info Display ================= */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.infoValue {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+
+/* ================= Edit Form ================= */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.input {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+}
+
+.editActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cancelEditBtn,
+.saveBtn {
+  flex: 1;
+  padding: 11px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.cancelEditBtn {
+  background-color: var(--color-primary-soft);
+  color: var(--color-text-main);
+}
+
+.saveBtn {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* ================= Bookings / Requests List ================= */
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bookingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bookingName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.bookingDate {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.statusConfirmed {
+  background-color: #dcfce7;
+  color: #16a34a;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statusPending {
+  background-color: #fef9c3;
+  color: #ca8a04;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.emptyText {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 600px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .headerCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logoutBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

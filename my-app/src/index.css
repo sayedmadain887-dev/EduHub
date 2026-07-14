@@ -1,0 +1,77 @@
+/* ==========================================================
+    Import Global Design Tokens (colors, fonts, spacing...)
+   ========================================================== */
+/* @import "./styles/variables.css"; */
+@import "./styles/variables.css";
+/* =============
+    Global Reset
+   Removes default browser spacing/styles so every browser
+   renders the site consistently.
+   ============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   3. Base HTML & Body Setup
+   Makes the page always fill the full screen height,
+   even if the content is short.
+   ========================================================== */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======  Root Container =====*/
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== Default Element Resets ====== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+

@@ -1,0 +1,89 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.passwordField {
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.passwordInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+}
+
+.passwordInput:focus {
+  border-color: var(--color-accent);
+}
+
+.errorText {
+  display: block;
+  color: var(--color-error);
+  font-size: 12.5px;
+  margin-top: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.cancelBtn,
+.confirmBtn {
+  flex: 1;
+  padding: 11px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 0.15s ease;
+}
+
+.cancelBtn {
+  background-color: var(--color-primary-soft);
+  color: var(--color-text-main);
+}
+
+.confirmBtn {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+.cancelBtn:hover,
+.confirmBtn:hover {
+  transform: translateY(-1px);
+}
