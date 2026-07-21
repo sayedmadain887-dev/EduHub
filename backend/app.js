@@ -60,6 +60,10 @@ app.use("/api/admin-log", adminLogRoutes);
 app.get("/", (req, res) => {
   res.json({ message: "EduHub Backend is running successfully 🚀" });
 });
+app.get("/loaderio-3e93df04996fab60084de1a85ef739d9.txt", (req, res) => {
+  res.send("loaderio-3e93df04996fab60084de1a85ef739d9");
+});
+
 
 // 404 Handler
 app.use((req, res) => {
@@ -90,9 +94,7 @@ app.use((err, req, res, next) => {
       : err.message,
   });
 });
-app.get("/loaderio-3e93df04996fab60084de1a85ef739d9.txt", (req, res) => {
-  res.send("loaderio-3e93df04996fab60084de1a85ef739d9");
-});
+
 // ---------- Server Start ----------
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
